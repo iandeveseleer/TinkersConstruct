@@ -855,7 +855,7 @@ public class SmelteryRecipeProvider extends BaseRecipeProvider implements ISmelt
                                  .save(consumer, modResource(folder + "filling/seared_fuel_gauge"));
     ContainerFillingRecipeBuilder.tableRecipe(TinkerSmeltery.searedLantern, FluidValues.NUGGET)
                                  .save(consumer, modResource(folder + "filling/seared_lantern_pixel"));
-    ContainerFillingRecipeBuilder.basinRecipe(TinkerSmeltery.searedLantern, FluidValues.LANTERN_CAPACITY)
+    ContainerFillingRecipeBuilder.basinRecipe(TinkerSmeltery.searedLantern, FluidValues.SEARED_LANTERN_CAPACITY)
                                  .save(consumer, modResource(folder + "filling/seared_lantern_full"));
     // tank filling - scorched
     ContainerFillingRecipeBuilder.basinRecipe(TinkerSmeltery.scorchedTank.get(TankType.INGOT_TANK), FluidValues.INGOT)
@@ -868,7 +868,7 @@ public class SmelteryRecipeProvider extends BaseRecipeProvider implements ISmelt
                                  .save(consumer, modResource(folder + "filling/scorched_fuel_gauge"));
     ContainerFillingRecipeBuilder.tableRecipe(TinkerSmeltery.scorchedLantern, FluidValues.NUGGET)
                                  .save(consumer, modResource(folder + "filling/scorched_lantern_pixel"));
-    ContainerFillingRecipeBuilder.basinRecipe(TinkerSmeltery.scorchedLantern, FluidValues.LANTERN_CAPACITY)
+    ContainerFillingRecipeBuilder.basinRecipe(TinkerSmeltery.scorchedLantern, FluidValues.SCORCHED_LANTERN_CAPACITY)
                                  .save(consumer, modResource(folder + "filling/scorched_lantern_full"));
 
     // Slime
@@ -1624,9 +1624,9 @@ public class SmelteryRecipeProvider extends BaseRecipeProvider implements ISmelt
                         .save(consumer, modResource(slimeFolder + "mushroom_stew"));
 
     // fuels
-    MeltingFuelBuilder.fuel(new FluidStack(Fluids.LAVA, 50), 100)
+    MeltingFuelBuilder.fuel(new FluidStack(Fluids.LAVA, 50 * 81), 100)
                       .save(consumer, modResource(folder + "fuel/lava"));
-    MeltingFuelBuilder.fuel(new FluidStack(TinkerFluids.blazingBlood.get(), 50), 150)
+    MeltingFuelBuilder.fuel(new FluidStack(TinkerFluids.blazingBlood.get(), 50 * 81), 150)
                       .save(consumer, modResource(folder + "fuel/blaze"));
   }
 
